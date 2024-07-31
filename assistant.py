@@ -1,3 +1,7 @@
+# DEVELOPED BY <PRIYANSHUL SHARMA>
+# Priyanshul.is-a.dev
+
+
 import personal_assistant_api as ast
 import datetime
 import os
