@@ -6,20 +6,20 @@ import personal_assistant_api as ast
 import datetime
 import os
 
-#name of user
+
 user_name=""
 
 
 def start_conversation():
     global user_name
-    #get username till theare is no error
+   
     ast.speak("tumhara naam kya hai?")
     while True:
         user_name=ast.getAudio()
         if user_name!="bad input":
             break
 
-    #find approtiation greeting
+  
     hour=int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
         ast.speak("hello good morning "+user_name)
@@ -30,7 +30,6 @@ def start_conversation():
     ast.speak("i am your assistant and my name is "+ast.myAssistantName)
 
 
-#function personal assistant can do
 def whatcanido():
     ast.speak("Hello "+user_name)
     ast.speak("My name is "+ast.myAssistantName)
@@ -39,7 +38,7 @@ def whatcanido():
     ast.speak("I hope i can be a great help to you")
 
 
-#start
+
 start_conversation()
 
 while True:
